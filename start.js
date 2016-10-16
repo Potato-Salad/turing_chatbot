@@ -9,9 +9,9 @@ function respond(response, bot_choice) {
       dataString += data.toString();
     });
     py.stdout.on('end', function(){
-      console.log('Response=',dataString);
+      console.log(dataString);
     });
-    console.log(JSON.stringify(data));
+    //console.log(JSON.stringify(data));
     py.stdin.write(JSON.stringify(data));
     py.stdin.end();
 }
