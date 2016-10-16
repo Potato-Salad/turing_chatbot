@@ -15,6 +15,3 @@ function respond(response, bot_choice) {
     py.stdin.write(JSON.stringify(data));
     py.stdin.end();
 }
-
-//Test Code
-respond('hello',2)
