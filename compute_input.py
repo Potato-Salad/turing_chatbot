@@ -24,11 +24,11 @@ def main():
     print (bot_response)
     
 def js_respond(response, bot_choice):
-    if bot_choice == 2:
+    if bot_choice == 0:
         bot_name = bot_list[0]
-    elif bot_choice == 3:
+    elif bot_choice == 1:
         bot_name = bot_list[1]
-    else:
+    elif bot_choice == 2:
         bot_name = bot_list[2]
     result = API.talk(user_key, app_id, host, bot_name, response, recent=True)
     bot_response = result['response']
