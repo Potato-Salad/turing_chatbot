@@ -1,5 +1,5 @@
 ## compute_input.py
-import sys, json, numpy as np
+import sys, json,time, numpy as np
 from pb_py import main as API
 
 host = 'aiaas.pandorabots.com'
@@ -21,6 +21,7 @@ def main():
     #print "kappa"
     #SEEMS TO SPEFICALLY THE CLEVERBOT thing
     bot_response = js_respond(info[0], info[1])
+    time.sleep(len(bot_response)/10)
     print (bot_response)
     
 def js_respond(response, bot_choice):
